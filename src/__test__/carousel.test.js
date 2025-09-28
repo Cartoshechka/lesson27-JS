@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 // Отримуємо шлях до main.js
-const mainJsPath = path.resolve(__dirname, '../main.js')
+const mainJsPath = path.resolve(__dirname, '../simple-carousel.js')
 const carouselCode = fs.readFileSync(mainJsPath, 'utf-8')
 
 // Налаштування DOM перед тестами

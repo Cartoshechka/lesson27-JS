@@ -56,7 +56,7 @@ class Carousel {
   *!/
     }*/
 
-  #initProps(){
+  _initProps(){
     // this.container = document.querySelector('#carousel')
     // this.slides = this.container.querySelectorAll('.slide')
     // this.slidesContainer = this.container.querySelector('#slides-container')
@@ -78,7 +78,7 @@ class Carousel {
 
   }
 
-  #initControls(){
+  _initControls(){
     /*
      <div id="controls-container" class="controls">
       <div class="control control-pause" id="pause-btn">
@@ -110,7 +110,7 @@ class Carousel {
     this.#nextBtn = this.container.querySelector(`#${ELEMENT_IDS.NEXT_BTN}`)
   }
 
-  #initIndicators(){
+  _initIndicators(){
     /*
      <div id="indicators-container" class="indicators">
           <div class="indicator active" data-slide-to="0"></div>
@@ -139,7 +139,7 @@ class Carousel {
     this.#indicatorsItems = this.container.querySelectorAll(`.${CSS_CLASSES.INDICATOR}`)
   }
 
-  #initEventListeners() {
+  _initEventListeners() {
     this.#pauseBtn.addEventListener('click', () => this.pausePlay())
     this.#nextBtn.addEventListener('click', () => this.next())
     this.#prevBtn.addEventListener('click', () => this.prev())
@@ -163,7 +163,7 @@ class Carousel {
     this.#gotoNthSlide(this.#currentSlide - 1)
   }
 
-  #tick() {
+  _tick() {
     this.#timerID = setInterval(() => this.#gotoNextSlide(), this.TIMER_INTERVAL)
   }
 
@@ -199,7 +199,7 @@ class Carousel {
   play() {
     this.#pauseBtn.innerHTML = this.#FA_PAUSE
     this.isPlaying = true
-    this.#tick()
+    this._tick()
   }
 
   pause() {
@@ -224,11 +224,11 @@ class Carousel {
   }
 
   init() {
-    this.#initProps()
-    this.#initControls()
-    this.#initIndicators()
-    this.#initEventListeners()
-    this.#tick()
+    this._initProps()
+    this._initControls()
+    this._initIndicators()
+    this._initEventListeners()
+    this._tick()
   }
 }
 
