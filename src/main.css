@@ -70,7 +70,7 @@ just for appearance; change whatever you want
 }
 
 .slide:nth-of-type(6) {
-    background: yellow;
+    background: #DAA520;
 }
 
 .slide:nth-of-type(7) {
@@ -81,6 +81,7 @@ just for appearance; change whatever you want
 
 .slides{
     margin-bottom: 10px;
+    user-select: none;
 }
 
 .indicators, .controls{
